@@ -1,0 +1,50 @@
+<html>
+    <head>
+		<meta charset='utf-8'>
+        <title>torneio do poder Psiu Psiu</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body>
+        <h1>Cadastro de Lutador!!!!!!!!!!!</h1>
+        
+        <form action="#"
+        	method="post"
+        	th:action="@{/cadastro}"
+        	th:object="${model}">
+        	
+        	<input placeholder="Nome do lutador"
+        			id="nome"
+        			th:field="*{nome}"/>
+        	
+        	<input placeholder="ki do lutador"
+        			id="ki"
+        			type="number"
+        			th:field="*{ki}"/>
+        	<br>
+        	<br>
+        	<input placeholder="estamina do lutador"
+        			id="estamina"
+        			type="number"
+        			th:field="*{estamina}"/>
+        			
+        	<input placeholder="Peso do lutador"
+        			id="peso"
+        			type="number"
+        			th:field="*{peso}"/>
+        			
+        	<br>
+        	<br>
+        	<input type="submit" value="Salvar"/>
+        	
+        	
+        </form>
+        
+        
+        <tr th:each=" lutador : ${lutadores}">
+			<span th:text="${lutador.nome}"></span>
+			<span th:text="${lutador.ki}"></span>
+			<p></p>
+			
+		</trth>
+    </body>
+</html>

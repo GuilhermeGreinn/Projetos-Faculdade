@@ -1,0 +1,52 @@
+<html>
+    <head>
+		<meta charset='utf-8'>
+        <title>torneio do poder Psiu Psiu</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body>
+        <h1>Atualização do Lutador!</h1>
+        
+        <form action="#"
+        	method="put"
+        	th:action="@{/atualizar/{id} (id=${lutador.id})}"
+        	th:object="${lutador}">
+        	
+        	<input placeholder="Nome do lutador"
+        			id="nome"
+        			th:field="*{nome}"/>
+        	
+        	<br>
+        	<br>
+        	<input placeholder="ki do lutador"
+        			id="ki"
+        			type="number"
+        			th:field="*{ki}"/>
+        	<br>
+        	<br>
+        	<input placeholder="estamina do lutador"
+        			id="estamina"
+        			type="number"
+        			th:field="*{estamina}"/>
+        	<br>
+        	<br>	
+        	<input placeholder="Peso do lutador"
+        			id="peso"
+        			th:field="*{peso}"/>
+        			
+        	<br>
+        	<br>
+        	<input type="submit" value="Salvar"/>
+        	<input type="hidden" name="_method" value="PUT"/>
+        	
+        </form>
+        <form action="#"
+         method="post"
+        	th:action="@{/remover/{id}(id=${lutador.id})}"
+        	th:object="${lutador}">
+        	<input type="submit" value="Deletar"/>
+        	<input type="hidden" name="_method" value="DELETE">
+        	
+        </form>
+    </body>
+</html>

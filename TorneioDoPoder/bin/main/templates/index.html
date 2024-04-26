@@ -1,0 +1,26 @@
+<html>
+    <head>
+		<meta charset='utf-8'>
+        <title>torneio do poder Psiu Psiu</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    </head>
+    <body>
+        <h1>Torneio Do Poder do Goku</h1>
+        
+        <h3>Lutadores confirmados:</h3>
+        
+        <tr th:each="lutador:${lutadores}">
+			
+			<a th:href="@{atualizar/{id}(id=${lutador.id})}">
+			<span th:text="${lutador.nome}"></span>
+			<span th:text="${lutador.ki}"></span>
+			<p></p>
+			
+		</a>
+		</tr>
+		<a href="/cadastro">
+			<p>Cadastrar Lutador</p>
+		</a>
+			
+    </body>
+</html>
