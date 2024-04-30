@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Source Hero</title>
+        <script src="js/scripts.js"></script>
+
+        <style>
+
+            h1{
+                color : black;
+                font-size: larger;
+            }
+
+            .header{
+                color: black;
+                font-size: larger;
+            }
+
+            .footer{
+                color: red;
+                font-size: larger;
+            }
+
+            .card{
+                border-color: grey;
+                border-width: 1px;
+                border-style: solid;
+                width: 23%;
+            }
+            #conteudo-heroi{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+
+        </style>
+
+    </head>
+
+    <body onload="carregarHerois()">
+
+        <h1 class="header">Lista de Herois</h1>
+
+        <div id="conteudo-heroi"></div>
+
+        <h1 class="footer"> FIM DA LISTA</h1>
+
+    </body>
+</html>
